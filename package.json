@@ -14,11 +14,11 @@
     "cover 99.5%"
   ],
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.20",
     "fast-glob": "^3.3.2",
     "imagemin": "^9.0.0",
-    "imagemin-webp": "^8.0.0",
+    "imagemin-webp": "^6.1.0",
     "postcss-sort-media-queries": "^5.2.0",
     "sass": "^1.83.0",
     "sharp": "^0.33.5",
