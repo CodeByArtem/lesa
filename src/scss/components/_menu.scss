@@ -4,26 +4,27 @@
 @use '../utils/mixins' as mx;
 
 .menu {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 
-    background-color: fn.get-color('dark-primary');
+  background-color: fn.get-color('dark-primary');
 
-    @include mx.mq('lg', 'max') {
-        @include mx.ease('fast', transform);
-        max-width: 248px;
-        transform: translateX(-100%);
-    
-        .sidebar.is-open & {
-          transform: translateX(0);
-          transition-delay: 300ms;
-        }
-      }
+  @include mx.mq('lg', 'max') {
+    @include mx.ease('fast', transform);
+    max-width: 248px;
+    transform: translateX(-100%);
+
+    .sidebar.is-open & {
+      transform: translateX(0);
+      transition-delay: 300ms;
+    }
+  }
 }
+
 .menu-list {
-    border-top: 1px solid;
-    border-color: fn.get-color('dark-tertiary');
+  border-top: 1px solid;
+  border-color: fn.get-color('dark-tertiary');
 }
 .menu-link {
   @extend %details;

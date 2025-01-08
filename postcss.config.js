@@ -1,6 +1,6 @@
 export const plugins = [
-  require("autoprefixer"),
+  // require("autoprefixer"),
   require("@fullhuman/postcss-purgecss")({
-    content: ["./**/*.html"], // Вкажіть ваші HTML або шаблони
+    sort: "mobile-first", 
   }),
 ];
