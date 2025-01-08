@@ -1,6 +1,14 @@
+import autoprefixer from 'autoprefixer';
+import purgecss from '@fullhuman/postcss-purgecss';
+import sortMediaQueries from 'postcss-sort-media-queries';
+
 export const plugins = [
-  // require("autoprefixer"),
-  require("@fullhuman/postcss-purgecss")({
-    sort: "mobile-first", 
+  autoprefixer(),
+  purgecss({
+    content: ['./src/**/*.html', './src/**/*.js'],
+  }),
+  sortMediaQueries({
+    sort: 'mobile-first', // автоматичне сортування медіа-запитів
   }),
 ];
+
