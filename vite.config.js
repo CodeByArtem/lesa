@@ -8,6 +8,7 @@ import imageminWebp from "imagemin-webp";
 import purgecss from "@fullhuman/postcss-purgecss"; 
 
 export default defineConfig({
+  base: '/my-sass-project/',
   plugins: [
     ViteImageOptimizer({
       png: { quality: 86 },
