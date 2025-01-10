@@ -11,4 +11,3 @@ export const plugins = [
     sort: 'mobile-first', // автоматичне сортування медіа-запитів
   }),
 ];
-
