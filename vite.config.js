@@ -82,7 +82,8 @@ export default defineConfig({
       apply: "serve",
     },
     purgecss({
-      content: ["./**/*.html"],
+      content: ['./**/*.html', './**/*.js'],
+      safelist: ['is-open'],
     }),
   ],
   build: {

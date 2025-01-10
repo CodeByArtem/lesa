@@ -5,7 +5,7 @@ import sortMediaQueries from 'postcss-sort-media-queries';
 export const plugins = [
   autoprefixer(),
   purgecss({
-    content: ['./src/**/*.html', './src/**/*.js'],
+    content: ['./**/*.html', './**/*.js'],
   }),
   sortMediaQueries({
     sort: 'mobile-first', // автоматичне сортування медіа-запитів
