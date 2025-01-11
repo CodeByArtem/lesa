@@ -61,7 +61,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import purgecss from "@fullhuman/postcss-purgecss";
 
 export default defineConfig({
-  base: '/lesa/',
+  base: '/',
   plugins: [
     ViteImageOptimizer({
       png: {
