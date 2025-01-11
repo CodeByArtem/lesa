@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
- "deploy": "vite build && npx gh-pages -d dist",
+    "deploy": "vite build && npx gh-pages -d dist",
     "dev": "vite",
     "build": "vite build --base=/lesa/",
     "preview": "vite preview",
@@ -25,7 +25,7 @@
     "sass": "^1.68.0",
     "sharp": "^0.33.5",
     "svgo": "^3.3.2",
-    "vite": "^4.4.5",
+    "vite": "^4.5.5",
     "vite-plugin-image-optimizer": "^1.1.7"
   },
   "dependencies": {
