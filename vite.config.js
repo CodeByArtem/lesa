@@ -5,9 +5,9 @@ import { defineConfig } from "vite";
 import glob from "fast-glob";
 import { fileURLToPath } from "url";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import copy from "rollup-plugin-copy";
 
 export default defineConfig({
-
   plugins: [
     ViteImageOptimizer({
       png: {
@@ -27,6 +27,13 @@ export default defineConfig({
       }),
       apply: "serve",
     },
+    copy({
+      targets: [
+        // Копируем icons.svg в папку assets сборки
+        { src: "src/img/icons.svg", dest: "dist/assets" },
+      ],
+      hook: "writeBundle",
+    }),
   ],
   build: {
     minify: false, // disable minification
@@ -39,9 +46,8 @@ export default defineConfig({
             fileURLToPath(new URL(file, import.meta.url)),
           ])
       ),
-      // output unminified CSS file
       output: {
-        assetFileNames: "assets/[name].[ext]",
+        assetFileNames: "assets/[name].[ext]", // Все ассеты в папке assets
       },
     },
   },
