@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "vite build && npx gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build --base=/my-sass-project/",
+    "build": "vite build --base=/lesa/",
     "preview": "vite preview",
     "watch": "npx vite build --watch"
   },
