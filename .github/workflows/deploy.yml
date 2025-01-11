@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
 
@@ -30,6 +30,6 @@ jobs:
           git config --global user.name "CodeByArtem"
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d dist
+        run: npx gh-pages -d dist --repo https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/CodeByArtem/lesa.git
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
